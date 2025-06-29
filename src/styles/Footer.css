@@ -29,7 +29,7 @@
 }
 
 .footer-block {
-    flex: 1.2;
+    flex: 1.4;
     min-width: 180px;
 }
 
@@ -38,6 +38,7 @@
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 12px;
+    white-space: nowrap;
 }
 
 .footer-section ul {
@@ -84,7 +85,7 @@
 .social-icons {
     display: flex;
     gap: 12px;
-    margin-top: 12px;
+    margin-top: 24px;
 }
 
 .social-icons img {
