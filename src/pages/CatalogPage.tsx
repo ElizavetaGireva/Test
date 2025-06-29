@@ -18,11 +18,6 @@ const CatalogPage = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [onlyAvailable, setOnlyAvailable] = useState(false);
     const [searchQuery, setSearchQuery] = useState('');
-    const [pages, setPages] = useState<{ [category: string]: number }>({
-        Акции: 1,
-        Свинина: 1,
-        Курица: 1,
-    });
 
     useEffect(() => {
         fetch('http://localhost:3001/products')
@@ -32,10 +27,13 @@ const CatalogPage = () => {
     }, []);
 
     const categories = ['Акции', 'Свинина', 'Курица'];
-    const itemsPerPage = 5;
+    const addToCart = (product: Product) => {
+        console.log('Добавлен в корзину:', product);
+    };
 
     return (
         <div className="catalog">
+
             <Filters
                 onlyAvailable={onlyAvailable}
                 setOnlyAvailable={setOnlyAvailable}
@@ -56,16 +54,8 @@ const CatalogPage = () => {
 
                 if (categoryProducts.length === 0) return null;
 
-                const currentPage = pages[category] || 1;
-                const startIdx = (currentPage - 1) * itemsPerPage;
-                const paginatedProducts = categoryProducts.slice(
-                    startIdx,
-                    startIdx + itemsPerPage
-                );
-
-                const totalPages = Math.ceil(categoryProducts.length / itemsPerPage);
-
                 return (
+
                     <div
                         className="catalog-section"
                         id={category.toLowerCase()}
@@ -76,28 +66,11 @@ const CatalogPage = () => {
                             <button className="show-all">Показать все</button>
                         </div>
                         <div className="cards">
-                            {paginatedProducts.map((p) => (
-                                <ProductCard key={p.id} product={p} />
+                            {categoryProducts.map((p) => (
+                                <ProductCard key={p.id} product={p} addToCart={addToCart} />
+
                             ))}
                         </div>
-
-                        {totalPages > 1 && (
-                            <div className="pagination">
-                                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                                    (page) => (
-                                        <button
-                                            key={page}
-                                            className={page === currentPage ? 'active' : ''}
-                                            onClick={() =>
-                                                setPages((prev) => ({ ...prev, [category]: page }))
-                                            }
-                                        >
-                                            {page}
-                                        </button>
-                                    )
-                                )}
-                            </div>
-                        )}
                     </div>
                 );
             })}

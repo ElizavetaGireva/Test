@@ -28,13 +28,15 @@ const Filters: React.FC<FiltersProps> = ({ onlyAvailable, setOnlyAvailable, sear
 
     return (
         <div className="filters-wrapper">
-            <input
-                type="text"
-                className="search-input"
-                placeholder="Искать в магазине"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-            />
+            <div className="search-bar">
+                <img src="/search.png" alt="Поиск" className="search-icon"/>
+                <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Искать в магазине"
+                />
+            </div>
 
 
             <div className="checkbox-wrapper">
