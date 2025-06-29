@@ -39,16 +39,6 @@ const Filters: React.FC<FiltersProps> = ({ onlyAvailable, setOnlyAvailable, sear
             </div>
 
 
-            <div className="checkbox-wrapper">
-                <label>
-                    <input
-                        type="checkbox"
-                        checked={onlyAvailable}
-                        onChange={() => setOnlyAvailable(!onlyAvailable)}
-                    />
-                    Только в наличии
-                </label>
-            </div>
 
             <div className="categories">
                 {categories.map((c) => (

@@ -32,50 +32,52 @@ const CatalogPage = () => {
     };
 
     return (
-        <div className="catalog">
+        <div className="page">
+            <div className="catalog">
 
-            <Filters
-                onlyAvailable={onlyAvailable}
-                setOnlyAvailable={setOnlyAvailable}
-                searchQuery={searchQuery}
-                setSearchQuery={setSearchQuery}
-            />
+                <Filters
+                    onlyAvailable={onlyAvailable}
+                    setOnlyAvailable={setOnlyAvailable}
+                    searchQuery={searchQuery}
+                    setSearchQuery={setSearchQuery}
+                />
 
-            {categories.map((category) => {
-                let categoryProducts = products.filter(
-                    (p) =>
-                        p.category === category &&
-                        p.name.toLowerCase().includes(searchQuery.toLowerCase())
-                );
+                {categories.map((category) => {
+                    let categoryProducts = products.filter(
+                        (p) =>
+                            p.category === category &&
+                            p.name.toLowerCase().includes(searchQuery.toLowerCase())
+                    );
 
-                if (onlyAvailable) {
-                    categoryProducts = categoryProducts.filter((p) => p.inStock);
-                }
+                    if (onlyAvailable) {
+                        categoryProducts = categoryProducts.filter((p) => p.inStock);
+                    }
 
-                if (categoryProducts.length === 0) return null;
+                    if (categoryProducts.length === 0) return null;
 
-                return (
+                    return (
 
-                    <div
-                        className="catalog-section"
-                        id={category.toLowerCase()}
-                        key={category}
-                    >
-                        <div className="catalog-header">
-                            <h2>{category}</h2>
-                            <button className="show-all">Показать все</button>
+                        <div
+                            className="catalog-section"
+                            id={category.toLowerCase()}
+                            key={category}
+                        >
+                            <div className="catalog-header">
+                                <h2>{category}</h2>
+                                <button className="show-all">Показать все</button>
+                            </div>
+                            <div className="cards">
+                                {categoryProducts.map((p) => (
+                                    <ProductCard key={p.id} product={p} addToCart={addToCart}/>
+
+                                ))}
+                            </div>
                         </div>
-                        <div className="cards">
-                            {categoryProducts.map((p) => (
-                                <ProductCard key={p.id} product={p} addToCart={addToCart} />
-
-                            ))}
-                        </div>
-                    </div>
-                );
-            })}
+                    );
+                })}
+            </div>
         </div>
-    );
-};
+            );
+            };
 
-export default CatalogPage;
+            export default CatalogPage;

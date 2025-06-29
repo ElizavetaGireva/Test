@@ -4,6 +4,12 @@
     min-height: 100vh;
     padding: 0 20px;
     margin-top: 20px;
+
+}
+.page {
+    width: 770px;
+    margin: 0 auto;
+    padding-top: 0;
 }
 
 .catalog-header {
