@@ -64,7 +64,10 @@ const CatalogPage = () => {
                         >
                             <div className="catalog-header">
                                 <h2>{category}</h2>
-                                <button className="show-all">Показать все</button>
+                                <button className="show-all">
+                                    Показать все
+                                    <img src="/all.png" alt="стрелка" className="show-all-icon"/>
+                                </button>
                             </div>
                             <div className="cards">
                                 {categoryProducts.map((p) => (

@@ -21,16 +21,6 @@
       "image": "/meat.png"
     },
     {
-      "id": 3,
-      "name": "Стейк Рибай",
-      "weight": "0.5 кг",
-      "price": 1200,
-      "oldPrice": 1400,
-      "inStock": false,
-      "category": "Акции",
-      "image": "/meat.png"
-    },
-    {
       "id": 4,
       "name": "Стейк Рибай",
       "weight": "0.5 кг",
@@ -133,16 +123,6 @@
     },
     {
       "id": 14,
-      "name": "Стейк Рибай",
-      "weight": "0.5 кг",
-      "price": 1200,
-      "oldPrice": 1400,
-      "inStock": false,
-      "category": "Курица",
-      "image": "/meat.png"
-    },
-    {
-      "id": 15,
       "name": "Стейк Рибай",
       "weight": "0.5 кг",
       "price": 1200,

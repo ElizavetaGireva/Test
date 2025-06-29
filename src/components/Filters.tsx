@@ -10,11 +10,11 @@ interface FiltersProps {
 
 
 const categories = [
-    { label: 'Акции', icon: '/icon.png' },
-    { label: 'Свинина', icon: '/icon.png' },
-    { label: 'Говядина', icon: '/icon.png' },
-    { label: 'Наборы', icon: '/icon.png' },
-    { label: 'Курица', icon: '/icon.png' },
+    { label: 'Акции', icon: '/icon1.png' },
+    { label: 'Свинина', icon: '/icon1.png' },
+    { label: 'Говядина', icon: '/icon2.png' },
+    { label: 'Наборы', icon: '/icon1.png' },
+    { label: 'Курица', icon: '/icon3.png' },
 ];
 
 const Filters: React.FC<FiltersProps> = ({ onlyAvailable, setOnlyAvailable, searchQuery,

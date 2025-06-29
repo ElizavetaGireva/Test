@@ -1,5 +1,5 @@
 body {
-    background-color: #000;
+    background-color: #111;
     margin: 0;
     padding: 0;
 }
@@ -67,7 +67,7 @@ body {
     padding: 7px 14px;
     border: 1px solid white;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
     color: white;
     gap: 6px;

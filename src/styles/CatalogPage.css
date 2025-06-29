@@ -1,9 +1,9 @@
 .catalog {
-    background: #1e1e1e;
+    background: #111;
     color: white;
     min-height: 100vh;
-    padding: 0 20px;
-    margin-top: 20px;
+    padding: 0 10px;
+    margin-top: 0;
 
 }
 .page {
@@ -16,15 +16,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 10px;
     margin-bottom: 2px;
 }
 
 .catalog-header h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 28px;
+
+    margin: 0;
+    font-size: 20px;
     font-weight: bold;
+    line-height: 1;
 }
 
 .show-all {
@@ -33,32 +34,33 @@
     color: white;
     font-weight: bold;
     cursor: pointer;
-    text-decoration: underline;
-    margin-right: 18px;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .cards {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    gap: 20px;
-    padding-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 .catalog-section {
+    width: 748px;
+    height: 320px;
     background-color: #2a2a2a;
-    padding: 24px 20px;
-    margin: 32px 20px 30px 20px;
+    padding: 24px 10px;
+    margin: 10px 0;
     border-radius: 16px;
     box-sizing: border-box;
+
 }
 .catalog-section {
     scroll-margin-top: 100px;
-}
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
-    gap: 8px;
 }
 
 .pagination button {
@@ -81,4 +83,7 @@
     font-weight: bold;
 }
 
-
+.show-all-icon {
+    width: 14px;
+    height: 14px;
+}

@@ -1,7 +1,7 @@
 .filters-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     padding: 0 20px;
     margin-top: 0;
 }
@@ -16,12 +16,14 @@
     width: 100%;
     max-width: 710px;
     box-sizing: border-box;
-    margin: 0 auto 0;
+
     height: 34px;
     background-color: #2a2a2a;
     border-radius: 17px;
     padding: 0 12px;
     gap: 8px;
+    margin-top: 10px
+
 }
 
 .search-bar input {
@@ -43,42 +45,39 @@
 
 .categories {
     display: flex;
-
-    gap: 36px;
     flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 710px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
+
 .category-btn {
-    background-color: #2c2c2c;
+    width: 133px;
+    height: 90px;
+    background-color: #2a2a2a;
+    color: white;
     border: none;
-    border-radius: 16px;
-    padding: 16px 20px;
+    border-radius: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    width: 195px;
-    height: 100px;
     justify-content: center;
     gap: 8px;
-    transition: background-color 0.2s ease;
+    cursor: pointer;
 }
+
 
 .category-btn:hover {
     background-color: #3a3a3a;
 }
 
 .category-icon {
-    width: 32px;
-    height: 32px;
+    width: 60px;
+    height: 40px;
     object-fit: contain;
 }
 
-.checkbox-wrapper {
-    margin: 12px 0 16px 0;
-    font-size: 14px;
-    color: white;
-}
